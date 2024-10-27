@@ -6,37 +6,27 @@
 
     <title>JS - Exercício 02</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #1f1f1f;
-        }
-
-        h1 {
-            margin: 20px 30px;
-            color: #ffa048;
-        }
-
-        p {
-            margin: 10px 30px;
-            text-indent: 40px;
-            color: #FFFFFF;
-        }
-    </style>
+    <link rel="stylesheet" href="../standards/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
 </head>
 <body>
-    <h1>Storing data and processing it</h1>
-    <p>Let's start dealing with data in JavaScript!</p>
+    <img src="../standards/js.png" alt="JavaScript Logo">
+    <h1>JavaScript Studies</h1>
+    <p>Exercício 02 - Armazenando e Processando Dados</p>
 
-    <script>
-        let nome = window.prompt('Tell me your name!')
-        window.alert('Nice to meet you, ' + nome + '!')
-    </script>
+    <button class="button" id="exe-button">Executar Código JS</button>
+
+    <button class="button" id="open-dialog-button">O que este código está fazendo?</button>
+
+    <dialog id="explain-code-dialog">
+        <h1>O que este código está fazendo?</h1>
+        <span class="material-symbols-outlined" id="close-dialog-button">close</span>
+
+        <p>Estou utilizando <strong>let</strong> para criar uma variável chamada "nome". Esta variável está sendo alimentada com o dado inserido no <strong>prompt</strong> pelo usuário.</p>
+        <p>Em seguida, um <strong>alert</strong> é feito utilizando o nome concatenado para se comunicar com o usuário, inserindo o dado armazenado no meio da frase.</p>
+    </dialog>
+
+    <script src="ex002.js"></script>
+    <script src="../standards/dialog.js"></script>
 </body>
 </html>

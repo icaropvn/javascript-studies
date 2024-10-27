@@ -1,21 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>JS - Exercício 04</title>
+
+    <link rel="stylesheet" href="../standards/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+
+    <style>
+        #canva {
+            display: none;
+            border: 1px solid #FFFFFF;
+            width: 70vw;
+            margin: 5vh auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #canva p {
+            font-family: 'Nunito Sans';
+            font-weight: 100;
+            margin: 0;
+            text-align: left;
+        }
+
+        #canva p strong {
+            color: #ffd664;
+        }
+    </style>
 </head>
 <body>
-    <h1>Writing on the screen</h1>
+    <img src="../standards/js.png" alt="JavaScript Logo">
+    <h1>JavaScript Studies</h1>
+    <p>Exercício 04 - Escrevendo Dados no HTML com JS</p>
 
-    <script>
-        let name = window.prompt('Tell me your name:')
+    <button class="button" id="exe-button">Executar Código JS</button>
 
-        document.write(`<strong>Name:</strong> ${name}<br>`)
-        document.write(`<strong>Your name length is:</strong> ${name.length}<br>`)
-        document.write(`<strong>Your name in upper case:</strong> ${name.toUpperCase()}<br>`)
-        document.write(`<strong>Your name in lower case:</strong> ${name.toLowerCase()}`)
-    </script>
+    <div id="canva"></div>
+
+    <button class="button" id="open-dialog-button">O que este código está fazendo?</button>
+
+    <dialog id="explain-code-dialog">
+        <h1>O que este código está fazendo?</h1>
+        <span class="material-symbols-outlined" id="close-dialog-button">close</span>
+
+        <p>Neste código, estou pegando o nome do usuário por prompt. Com este nome dentro de uma variável, eu insiro informações dentro do HTML com o método <strong>.insertAdjacentHTML()</strong> de uma div ou elemento qualquer. Usando este método juntamente com o parâmetro <strong>beforeend</strong>, conseguimos injetar várias linhas de HTML neste elemento. No caso, eu insiro várias template strings atribuindo o nome do usuário com modificações ou demonstrando estatísticas dele. Isso foi feito utilizando o atributo <strong>.length</strong> e os métodos <strong>.toUpperCase()</strong> e <strong>.toLowerCase()</strong>.</p>
+    </dialog>
+
+    <script src="ex004.js"></script>
+    <script src="../standards/dialog.js"></script>
 </body>
 </html>
