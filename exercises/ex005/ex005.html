@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS - Exercício 05</title>
+
+    <link rel="stylesheet" href="../standards/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close">
+
+    <style>
+        #box {
+            background-color: #FFFFFF;
+            width: 120px;
+            height: 80px;
+            margin: 40px auto 0 auto;
+            border-radius: 10px;
+        }
+
+        #buttons {
+            display: block;
+            margin: 40px auto 0 auto;
+            width: fit-content;
+        }
+
+        .box-button {
+            width: 120px;
+            height: 40px;
+            margin: 0 20px 0 20px;
+            border-radius: 10px;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.1em;
+            font-weight: 300;
+            font-family: 'Nunito Sans';
+            cursor: pointer;
+
+            transition:
+                transform 0.1s ease,
+                box-shadow 0.1s ease;
+        }
+
+        .box-button:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 10px 10px 10px #00000052;
+        }
+
+        .box-button:active {
+            transform: translate(0px, 0px);
+            box-shadow: none;
+        }
+
+        #blue {
+            background-color: #516af5;
+        }
+
+        #red {
+            background-color: #f5517a;
+        }
+
+        #green {
+            background-color: #56b873;
+        }
+    </style>
+</head>
+<body>
+    <img src="../standards/js.png" alt="JavaScript Logo">
+    <h1>JavaScript Studies</h1>
+    <p>Exercício 05 - Selecionando objetos do DOM com JS</p>
+
+    <div id="box"></div>
+
+    <div id="buttons">
+        <button class="box-button" id="blue">Azul</button>
+        <button class="box-button" id="red">Vermelho</button>
+        <button class="box-button" id="green">Verde</button>
+    </div>
+
+    <button class="button" id="open-dialog-button">O que este código está fazendo?</button>
+
+    <dialog id="explain-code-dialog">
+        <h1>O que este código está fazendo?</h1>
+        <span class="material-symbols-outlined" id="close-dialog-button">close</span>
+
+        <p>Neste código, estou treinando o uso do método <strong>getElementBy{...}</strong> para selecionar objetos da árvore do DOM. No caso, uma div está sendo selecionada e tendo sua propriedade de estilo 'background-color' alterada com base no botão clicado.</p>
+    </dialog>
+
+    <script src="ex005.js"></script>
+    <script src="../standards/dialog.js"></script>
+</body>
+</html>
