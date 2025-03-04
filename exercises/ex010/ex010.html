@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS - Exercício 10</title>
+
+    <link rel="stylesheet" href="../standards/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+
+    <style>
+        #main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            margin: 30px auto 0 auto;
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            border: 1px solid #CC1D4A;
+            border-radius: 10px;
+            padding: 20px 40px;
+        }
+
+        #main-content h2 {
+            color: #ffffff;
+        }
+
+        #main-content label {
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            font-weight: 200;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #main-content label input {
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            padding: 3px 8px;
+            font-size: 0.9rem;
+            font-family: 'Nunito Sans', Arial, sans-serif;
+        }
+
+        #main-content label input:focus {
+            outline: 2px solid #CC1D4A;
+        }
+
+        #main-content button {
+            margin-top: 30px;
+            background-color: #af2548;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 4px 16px;
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+        }
+
+        #main-content button:hover {
+            background-color: #FFD600;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        #output {
+            display: none;
+            margin-top: 40px;
+            background-color: #272727;
+            color: #dfb747;
+            padding: 5px 20px;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        #output.show {
+            display: inline;
+        }
+
+        #output.invalido {
+            color: #df4747;
+        }
+    </style>
+</head>
+<body>
+    <img src="../standards/js.png" alt="JavaScript Logo">
+    <h1>JavaScript Studies</h1>
+    <p>Exercício 10 - Condições múltiplas</p>
+
+    <div id="main-content">
+        <h2>Identificador de dias da semana</h2>
+        
+        <label>
+            Insira um número de 1 a 7
+            <input type="number" step="1">
+        </label>
+        <button>Revelar dia da semana</button>
+
+        <span id="output"></span>
+    </div>
+
+    <button class="button" id="open-dialog-button">O que este código está fazendo?</button>
+
+    <dialog id="explain-code-dialog">
+        <h1>O que este código está fazendo?</h1>
+        <span class="material-symbols-outlined" id="close-dialog-button">close</span>
+
+        <p>Neste código, utilizamos <strong>condições múltiplas</strong> para mostrar o dia da semana correspondente ao valor numérico do input. A lógica se baseia em verificar, através de um <strong>switch case</strong>, qual valor corresponde a qual dia da semana, de forma escrita.</p>
+
+        <p>O switch também identifica se o input é válido, de forma que qualquer valor fora do intervalo de 1 a 7 é desconsiderado, mostrando um mensagem de invalidação na tela.</p>
+    </dialog>
+
+    <script src="./ex010.js"></script>
+    <script src="../standards/dialog.js"></script>
+</body>
+</html>
